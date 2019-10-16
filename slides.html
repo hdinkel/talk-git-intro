@@ -30,9 +30,11 @@ class: center, middle
 
 # Introduction to Git &amp; Github
 
-[Luis Pedro Coelho](http://luispedro.org)
+Holger Dinkel
 
-[@luispedrocoelho](https://twitter.com/luispedrocoelho)
+based on original talk by:
+
+[Luis Pedro Coelho](http://luispedro.org) - [@luispedrocoelho](https://twitter.com/luispedrocoelho)
 
 ---
 
@@ -166,7 +168,7 @@ This poor man's git is not so different from the git model.
 
 Github is git + bells &amp; whistles
 
-[https://github.com/tobyhodges/software-carpentry-embl-2017](https://github.com/tobyhodges/software-carpentry-embl-2017)
+[https://github.com/malvikasharan/2019-10-16-embl](https://github.com/malvikasharan/2019-10-16-embl)
 
 
 Let's look at
@@ -174,7 +176,7 @@ Let's look at
 - Diffs
 
 For example,
-[this diff](https://github.com/tobyhodges/software-carpentry-embl-2017/commit/331f6ecbb84ea3beed77afad4d4347a5fca3bb51)
+[this diff](https://github.com/malvikasharan/2019-10-16-embl/commit/30496075ed585075a629a70ab9203c75d8a78c52)
 
 
 ---
@@ -195,8 +197,8 @@ If you want another editor, naturally, you can set it there (including GUI edito
 # Using git: step 1
 
 ```bash
-$ git clone https://github.com/tobyhodges/software-carpentry-embl-2017
-Cloning into 'software-carpentry-embl-2017'...
+$ git clone https://github.com/malvikasharan/2019-10-16-embl
+Cloning into '2019-10-16-embl'...
 remote: Counting objects: 123, done.
 remote: Compressing objects: 100% (89/89), done.
 remote: Total 123 (delta 58), reused 95 (delta 30), pack-reused 0
@@ -204,7 +206,7 @@ Receiving objects: 100% (123/123), 1.01 MiB | 33.00 KiB/s, done.
 Resolving deltas: 100% (58/58), done.
 ```
 
-Git now _cloned_ the repository from github to a directory called `software-carpentry-2017`.
+Git now _cloned_ the repository from github to a directory called `2019-10-16-embl`.
 
 Your copy is now **independent** of the original.
 
@@ -215,7 +217,7 @@ Your copy is now **independent** of the original.
 Let's explore the directory a bit:
 
 ```bash
-$ cd software-carpentry-embl-2017
+$ cd 2019-10-16-embl
 $ ls
 ```
 
@@ -241,7 +243,7 @@ Same information as on the github website:
 
 What we have here is
 
-1. the `project` directory (`software-carpentry-2017` in this case)
+1. the `project` directory (`2019-10-16-embl` in this case)
 2. inside a special `.git` folder, git is saving all the previous versions.
 
 
@@ -253,7 +255,7 @@ $ git diff 331f6ecbb84ea3beed77afad4d4347a5fca3bb51
 You can also use dates if you really want
 
 ```bash
-$ git diff '@{2017-10-18 18:30:00}'
+$ git diff '@{2019-09-18 18:30:00}'
 ```
 
 (This is just another example of git's flexibility over learnability).
@@ -344,10 +346,10 @@ index adbb224..0477b35 100644
 
  ### Instructors
 
-+- Luis Pedro Coelho
++- Holger Dinkel
  - Toby Hodges
  - Malvika Sharan
--- Luis Pedro Coelho
+-- Holger Dinkel
  - Frank Thommen
  - Mike Smith
  - Thomas Schwarzl
@@ -515,8 +517,8 @@ We will not discuss:
 How do we *initialize* a new git repository?
 
 ```bash
-$ mkdir git-notes-luispedro
-$ cd git-notes-luispedro
+$ mkdir git-notes-Holger
+$ cd git-notes-Holger
 $ git init
 ```
 
@@ -568,13 +570,13 @@ Fortunately, github is pretty good about helping out.
 --
 
 ```bash
-* $ git remote add origin https://github.com/luispedro/git-notes-luispedro
+* $ git remote add origin https://github.com/hdinkel/git-notes-Holger
 $ git push -u origin master
 ...
 ```
 
 We **add a remote** called _origin_ (just a convention) pointing to
-https://github.com/luispedro/git-notes-luispedro
+https://github.com/hdinkel/git-notes-Holger
 
 **Do not use the git@github.com URL**
 
@@ -597,7 +599,7 @@ but we will not cover it here. The github documentation explains it.
 So, add the remote like shown below (HTTPS):
 
 ```bash
-* $ git remote add origin https://github.com/luispedro/git-notes-luispedro
+* $ git remote add origin https://github.com/hdinkel/git-notes-Holger
 $ git push -u origin master
 ...
 ```
@@ -722,7 +724,7 @@ $ git pull
   remote: Compressing objects: 100% (2/2), done.
   remote: Total 3 (delta 0), reused 0 (delta 0)
   Unpacking objects: 100% (3/3), done.
-  From /tmp/git-notes-luispedro
+  From /tmp/git-notes-Holger
      3f9cca8..262601a  master     -&gt; origin/master
      Auto-merging bob.txt
 *     CONFLICT (add/add): Merge conflict in bob.txt
